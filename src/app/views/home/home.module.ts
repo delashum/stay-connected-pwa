@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { IonicModule } from '@ionic/angular';
+import { AddContactComponent } from './add-contact/add-contact.component';
 import { HomePage } from './home.page';
 
 @NgModule({
@@ -14,10 +14,11 @@ import { HomePage } from './home.page';
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
-      }
-    ])
+        component: HomePage,
+      },
+    ]),
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, AddContactComponent],
+  entryComponents: [AddContactComponent],
 })
 export class HomePageModule {}
